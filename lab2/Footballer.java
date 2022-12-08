@@ -12,3 +12,17 @@ public class Footballer {
         System.out.println("He plays for " + club + ".");
     }
 }
+
+/**
+ * This program 'Footballer' requires three arguments; 
+ * the footballer's name, his nationality, and the club he plays for.
+ * The output format is
+ * "My favorite football player is <name>.
+ * His nationality is <nationality>.
+ * He plays for <club>."
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: December 9, 2022
+**/
