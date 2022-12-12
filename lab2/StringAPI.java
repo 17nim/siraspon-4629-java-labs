@@ -25,7 +25,7 @@ public class StringAPI {
  * as <schoolName>. Then checks if it is a college, a university,
  * or neither of both.
  * 
- * The output format are:
+ * The output formats are:
  * "<schoolName> is a college.",
  * "<schoolName> is a university.",
  * "<schoolName> is not a college nor a university."
