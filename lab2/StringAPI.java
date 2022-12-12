@@ -19,3 +19,19 @@ public class StringAPI {
         }
     }
 }
+
+/**
+ * This program 'StringAPI' requires one argument and declares it
+ * as <schoolName>. Then checks if it is a college, a university,
+ * or neither of both.
+ * 
+ * The output format are:
+ * "<schoolName> is a college.",
+ * "<schoolName> is a university.",
+ * "<schoolName> is not a college nor a university."
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: December 12, 2022
+ **/
