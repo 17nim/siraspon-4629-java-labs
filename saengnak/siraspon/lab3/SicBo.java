@@ -78,3 +78,20 @@ public class SicBo {
         s.close();
     }
 }
+
+/*
+ * This program 'SicBo' is a dice game with a variety of possible bets
+ * that based on the points of 3 dice. Each bets has its own payout odds. 
+ * This program provides 2 ways of playing:
+ * 1. choosing high number or low number of dice points.
+ *      - High: 11-18 points
+ *      - Low: 3-10 points
+ *      if the player guess correctly, they win double of the money they put on the bet.
+ * 2. picking a number between 1 to 6: Players can bet on specific number they desire,
+ *      with the payout depending on how many dice show the number.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: December 22, 2022
+ */
