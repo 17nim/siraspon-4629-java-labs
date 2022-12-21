@@ -1,4 +1,4 @@
-package saengnak\siraspon\lab3;
+package saengnak.siraspon.lab3;
 
 import java.lang.Math;
 import java.util.Scanner;
@@ -65,7 +65,7 @@ public class SicBo {
                 }
 
                 if (betMoney < 30) {
-                    System.out.println("You lose 10 baht!");
+                    System.out.println("You lost 10 baht!");
                 } else {
                     System.out.println("You won " + betMoney + " baht!");
                 }
