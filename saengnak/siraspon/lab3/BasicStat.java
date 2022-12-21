@@ -1,3 +1,5 @@
+package saengnak\siraspon\lab3;
+
 import java.lang.Math;
 import java.util.Scanner;
 import java.util.Arrays;
