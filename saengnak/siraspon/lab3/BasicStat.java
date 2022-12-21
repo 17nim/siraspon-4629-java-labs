@@ -59,7 +59,7 @@ public class BasicStat {
 }
 
 /*
- * This program 'BasicStat' collects list of numbers that are seperate by space,
+ * This program 'BasicStat' collects list of numbers that are seperated by space,
  * sort them in ascending order, and calculates the minimum, maximum, average (mean),
  * median, and standard deviation. The output results are in two decimal places.
  * 
