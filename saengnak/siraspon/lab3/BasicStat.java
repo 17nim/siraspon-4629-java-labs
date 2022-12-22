@@ -30,7 +30,7 @@ public class BasicStat {
             if (len % 2 == 0) {
                 median = (doubleNumbersArray[len / 2] + doubleNumbersArray[(len / 2) - 1]) / 2;
             } else {
-                median = (doubleNumbersArray[len / 2]);
+                median = doubleNumbersArray[len / 2];
             }
 
             double min = doubleNumbersArray[0];
