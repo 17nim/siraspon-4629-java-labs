@@ -18,7 +18,8 @@ public class SicBoMethod {
     static String invalidInput = "Please enter a valid input.";
 
     static int getChoice() {
-        Scanner choiceInput = new Scanner(System.in); // Cannot close Scanner 'choiceInput' in Method 'getChoice', just so you know.
+        Scanner choiceInput = new Scanner(System.in);
+        // Scanner 'choiceInput' can't be closed in Method 'getChoice', just so you know.
         System.out.println("Choose how do you want to bet");
         System.out.println("Type '1': Choosing between high or low number.");
         System.out.println("Type '2': Picking a number between 1 to 6.");

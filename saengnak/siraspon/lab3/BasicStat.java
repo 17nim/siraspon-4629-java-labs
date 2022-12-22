@@ -1,21 +1,21 @@
 package saengnak.siraspon.lab3;
 
-import java.lang.Math;
 import java.util.Scanner;
 import java.util.Arrays;
 
 public class BasicStat {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        Scanner numbersInput = new Scanner(System.in);
         System.out.print("Enter numbers (seperate by space): ");
-        String input = s.nextLine();
+        String userInput = numbersInput.nextLine();
 
-        if (input.isEmpty()) {
+        if (userInput.isEmpty()) {
             System.out.println("Please enter at least one number.");
             System.exit(0);
+            // Check if user entered anything or not.
         } else {
 
-            String[] stringNumbersArray = input.split(" ");
+            String[] stringNumbersArray = userInput.split(" ");
             Double[] doubleNumbersArray = new Double[stringNumbersArray.length];
 
             double sum = 0;
@@ -33,27 +33,27 @@ public class BasicStat {
                 median = doubleNumbersArray[len / 2];
             }
 
-            double min = doubleNumbersArray[0];
-            double max = doubleNumbersArray[len - 1];
-            double avg = sum / len;
+            double minimum = doubleNumbersArray[0];
+            double maximum = doubleNumbersArray[len - 1];
+            double average = sum / len;
 
             double sumForSD = 0;
             for (int i = 0; i < len; i++) {
-                sumForSD += Math.pow(doubleNumbersArray[i] - avg, 2);
+                sumForSD += Math.pow(doubleNumbersArray[i] - average, 2);
             }
-            double sd = Math.sqrt(sumForSD / len);
+            double standardDeviation = Math.sqrt(sumForSD / len);
 
             System.out.print("Sorted numbers: ");
             for (int i = 0; i < len; i++) {
                 System.out.print(String.format("%,.2f", doubleNumbersArray[i]) + " ");
             }
             System.out.print("\n");
-            System.out.println("Minimum: " + String.format("%,.2f", min));
-            System.out.println("Maximum: " + String.format("%,.2f", max));
-            System.out.println("Average: " + String.format("%,.2f", avg));
+            System.out.println("Minimum: " + String.format("%,.2f", minimum));
+            System.out.println("Maximum: " + String.format("%,.2f", maximum));
+            System.out.println("Average: " + String.format("%,.2f", average));
             System.out.println("Median: " + String.format("%,.2f", median));
-            System.out.println("Standard Deviation: " + String.format("%,.2f", sd));
-            s.close();
+            System.out.println("Standard Deviation: " + String.format("%,.2f", standardDeviation));
+            numbersInput.close();
         }
     }
 }
