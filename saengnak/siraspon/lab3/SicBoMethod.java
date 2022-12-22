@@ -3,7 +3,8 @@ package saengnak.siraspon.lab3;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class SicBo {
+public class SicBoMethod {
+    static int choice;
 
     // Initialize the value of each 3 dice, and calculate sum of them.
     static int dice1 = 1 + (int) (Math.random() * ((6 - 1) + 1));
@@ -15,18 +16,29 @@ public class SicBo {
     static String eachDice = "Dice 1: " + dice1 + ", Dice 2: " + dice2 + ", Dice 3: " + dice3;
     static String diceTotal = "Total = " + diceSum;
     static String invalidInput = "Please enter a valid input.";
-    
-    public static void main(String[] args) {
-        Scanner userInput = new Scanner(System.in);
+
+    static int getChoice() {
+        Scanner choiceInput = new Scanner(System.in); // Cannot close Scanner 'choiceInput' in Method 'getChoice', just so you know.
         System.out.println("Choose how do you want to bet");
         System.out.println("Type '1': Choosing between high or low number.");
         System.out.println("Type '2': Picking a number between 1 to 6.");
         System.out.print("Enter your choice (1 or 2): ");
-        String choice = userInput.next();
+        choice = choiceInput.nextInt();
 
-        if (choice.equals("1")) {
+        if ((choice == 1 || choice == 2) == false) {
+            System.out.println(invalidInput);
+            System.exit(0);
+        }
+
+        return choice;
+    }
+
+    static void playGame() {
+        Scanner betInput = new Scanner(System.in);
+
+        if (choice == 1) {
             System.out.print("Type 'h' for high, 'l' for low: ");
-            String highOrLow = userInput.next().toLowerCase();
+            String highOrLow = betInput.next().toLowerCase();
 
             if (highOrLow.equals("h") || highOrLow.equals("l")) {
                 System.out.println(eachDice);
@@ -50,11 +62,11 @@ public class SicBo {
                 System.out.print(invalidInput);
             }
 
-        } else if (choice.equals("2")) {
+        } else if (choice == 2) {
             int betMoney = 0;
             String[] diceRange = { "1", "2", "3", "4", "5", "6" };
             System.out.print("Pick a number between 1 to 6: ");
-            String pickNumber = userInput.next();
+            String pickNumber = betInput.next();
 
             if (Arrays.asList(diceRange).contains(pickNumber)) {
                 System.out.println(eachDice);
@@ -80,20 +92,28 @@ public class SicBo {
         } else {
             System.out.print(invalidInput);
         }
-        userInput.close();
+        betInput.close();
+    }
+
+    public static void main(String[] args) {
+        getChoice();
+        playGame();
     }
 }
 
 /*
- * This program 'SicBo' is a dice game with a variety of possible bets
+ * This program 'SicBoMethod' is a dice game with a variety of possible bets
  * that based on the points of 3 dice. Each bets has its own payout odds. 
  * This program provides 2 ways of playing:
  * 1. choosing high number or low number of dice points.
  *      - High: 11-18 points
  *      - Low: 3-10 points
- *      if the player guess correctly, they win double of the money they put on the bet.
+ * if the player guess correctly, they win double of the money they put on the bet.
  * 2. picking a number between 1 to 6: Players can bet on specific number they desire,
- *      with the payout depending on how many dice show the number.
+ * with the payout depending on how many dice show the number.
+ * 
+ * 'SicBoMethod' is adapted from the previous program 'SicBo', with additional 
+ * usage of 2 methods, getChoice(), and playGame().
  * 
  * Made by: Siraspon Saengnak
  * ID: 653040462-9
