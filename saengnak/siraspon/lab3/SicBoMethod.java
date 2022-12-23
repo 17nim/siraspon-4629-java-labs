@@ -31,7 +31,7 @@ public class SicBoMethod {
         choice = userInput.nextInt();
 
         if ((choice == 1 || choice == 2) == false) {
-            System.out.println(invalidInput);
+            System.out.println(invalidInput + " (Enter 1 or 2 only!)");
             System.exit(0);
         }
 
@@ -62,10 +62,11 @@ public class SicBoMethod {
             } else if ((highOrLow.equals("l")) && diceSum >= 11) {
                 System.out.println("You lost 10 baht!");
             } else {
-                System.out.print(invalidInput);
+                System.out.print(invalidInput + " ('h' for high, 'l' for low)");
             }
-
-        } else if (choice == 2) {
+        }
+        
+        if (choice == 2) {
             int betMoney = 0;
             String[] diceRange = { "1", "2", "3", "4", "5", "6" };
             System.out.print("Pick a number between 1 to 6: ");
@@ -90,10 +91,8 @@ public class SicBoMethod {
                     System.out.println("You won " + betMoney + " baht!");
                 }
             } else {
-                System.out.print(invalidInput);
+                System.out.print(invalidInput + " (Enter a number between 1 to 6 only!)");
             }
-        } else {
-            System.out.print(invalidInput);
         }
     }
 }
