@@ -15,18 +15,19 @@ public class SicBoMethod {
     static String diceTotal = "Total = " + diceSum;
     static String invalidInput = "Please enter a valid input.";
 
+    static Scanner userInput = new Scanner(System.in);
+
     public static void main(String[] args) {
         getChoice();
         playGame();
     }
 
     static int getChoice() {
-        Scanner choiceInput = new Scanner(System.in);
         System.out.println("Choose how do you want to bet");
         System.out.println("Type '1': Choosing between high or low number.");
         System.out.println("Type '2': Picking a number between 1 to 6.");
         System.out.print("Enter your choice (1 or 2): ");
-        choice = choiceInput.nextInt();
+        choice = userInput.nextInt();
 
         if ((choice == 1 || choice == 2) == false) {
             System.out.println(invalidInput);
@@ -37,11 +38,9 @@ public class SicBoMethod {
     }
 
     static void playGame() {
-        Scanner betInput = new Scanner(System.in);
-
         if (choice == 1) {
             System.out.print("Type 'h' for high, 'l' for low: ");
-            String highOrLow = betInput.next().toLowerCase();
+            String highOrLow = userInput.next().toLowerCase();
 
             if (highOrLow.equals("h") || highOrLow.equals("l")) {
                 System.out.println(eachDice);
@@ -69,7 +68,7 @@ public class SicBoMethod {
             int betMoney = 0;
             String[] diceRange = { "1", "2", "3", "4", "5", "6" };
             System.out.print("Pick a number between 1 to 6: ");
-            String pickNumber = betInput.next();
+            String pickNumber = userInput.next();
 
             if (Arrays.asList(diceRange).contains(pickNumber)) {
                 System.out.println(eachDice);
@@ -95,7 +94,7 @@ public class SicBoMethod {
         } else {
             System.out.print(invalidInput);
         }
-        betInput.close();
+        userInput.close();
     }
 }
 
