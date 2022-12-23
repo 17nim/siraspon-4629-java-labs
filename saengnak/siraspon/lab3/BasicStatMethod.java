@@ -7,14 +7,13 @@ public class BasicStatMethod {
 
     static String getInput() {
         Scanner numbersInput = new Scanner(System.in);
-        // Scanner 'numbersInput' can't be closed in Method 'getInput', just so you know.
         System.out.print("Enter numbers (seperate by space): ");
         String userInput = numbersInput.nextLine();
 
         if (userInput.isEmpty()) {
             System.out.println("Please enter at least one number.");
             System.exit(0);
-        } // Check if user entered anything or not.
+        }
 
         return userInput;
     }

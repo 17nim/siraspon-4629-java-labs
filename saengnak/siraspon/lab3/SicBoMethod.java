@@ -6,20 +6,17 @@ import java.util.Arrays;
 public class SicBoMethod {
     static int choice;
 
-    // Initialize the value of each 3 dice, and calculate sum of them.
     static int dice1 = 1 + (int) (Math.random() * ((6 - 1) + 1));
     static int dice2 = 1 + (int) (Math.random() * ((6 - 1) + 1));
     static int dice3 = 1 + (int) (Math.random() * ((6 - 1) + 1));
     static int diceSum = dice1 + dice2 + dice3;
 
-    // Declare string variables that take charge of displaying various messages.
     static String eachDice = "Dice 1: " + dice1 + ", Dice 2: " + dice2 + ", Dice 3: " + dice3;
     static String diceTotal = "Total = " + diceSum;
     static String invalidInput = "Please enter a valid input.";
 
     static int getChoice() {
         Scanner choiceInput = new Scanner(System.in);
-        // Scanner 'choiceInput' can't be closed in Method 'getChoice', just so you know.
         System.out.println("Choose how do you want to bet");
         System.out.println("Type '1': Choosing between high or low number.");
         System.out.println("Type '2': Picking a number between 1 to 6.");

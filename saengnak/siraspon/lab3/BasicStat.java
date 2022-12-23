@@ -12,7 +12,6 @@ public class BasicStat {
         if (userInput.isEmpty()) {
             System.out.println("Please enter at least one number.");
             System.exit(0);
-            // Check if user entered anything or not.
         } else {
 
             String[] stringNumbersArray = userInput.split(" ");
