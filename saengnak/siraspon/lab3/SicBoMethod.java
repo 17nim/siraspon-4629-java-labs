@@ -15,6 +15,11 @@ public class SicBoMethod {
     static String diceTotal = "Total = " + diceSum;
     static String invalidInput = "Please enter a valid input.";
 
+    public static void main(String[] args) {
+        getChoice();
+        playGame();
+    }
+
     static int getChoice() {
         Scanner choiceInput = new Scanner(System.in);
         System.out.println("Choose how do you want to bet");
@@ -91,11 +96,6 @@ public class SicBoMethod {
             System.out.print(invalidInput);
         }
         betInput.close();
-    }
-
-    public static void main(String[] args) {
-        getChoice();
-        playGame();
     }
 }
 
