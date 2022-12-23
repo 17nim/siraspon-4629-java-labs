@@ -49,7 +49,7 @@ public class BasicStatMethod {
 
         System.out.print("Sorted numbers: ");
         for (int i = 0; i < len; i++) {
-            System.out.print(String.format("%,.2f", doubleNumbersArray[i]) + " ");
+            System.out.print(doubleNumbersArray[i] + " ");
         }
         System.out.print("\n");
         System.out.println("Minimum: " + String.format("%,.2f", minimum));
