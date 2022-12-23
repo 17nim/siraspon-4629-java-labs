@@ -4,18 +4,23 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class BasicStatMethod {
+    static Scanner userInput = new Scanner(System.in);
+    public static void main(String[] args) {
+        String input = getInput();
+        calculateStat(input);
+        userInput.close();
+    }
 
     static String getInput() {
-        Scanner numbersInput = new Scanner(System.in);
         System.out.print("Enter numbers (seperate by space): ");
-        String userInput = numbersInput.nextLine();
+        String numbersInput = userInput.nextLine();
 
-        if (userInput.isEmpty()) {
+        if (numbersInput.isEmpty()) {
             System.out.println("Please enter at least one number.");
             System.exit(0);
         }
 
-        return userInput;
+        return numbersInput;
     }
 
     static void calculateStat(String numberList) {
@@ -57,12 +62,7 @@ public class BasicStatMethod {
         System.out.println("Average: " + String.format("%,.2f", average));
         System.out.println("Median: " + String.format("%,.2f", median));
         System.out.println("Standard Deviation: " + String.format("%,.2f", standardDeviation));
-    }
-
-    public static void main(String[] args) {
-        String input = getInput();
-        calculateStat(input);
-    }
+    } 
 }
 
 /*

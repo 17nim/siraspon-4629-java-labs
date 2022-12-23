@@ -20,6 +20,7 @@ public class SicBoMethod {
     public static void main(String[] args) {
         getChoice();
         playGame();
+        userInput.close();
     }
 
     static int getChoice() {
@@ -94,7 +95,6 @@ public class SicBoMethod {
         } else {
             System.out.print(invalidInput);
         }
-        userInput.close();
     }
 }
 

@@ -5,16 +5,16 @@ import java.util.Arrays;
 
 public class BasicStat {
     public static void main(String[] args) {
-        Scanner numbersInput = new Scanner(System.in);
+        Scanner userInput = new Scanner(System.in);
         System.out.print("Enter numbers (seperate by space): ");
-        String userInput = numbersInput.nextLine();
+        String numbersInput = userInput.nextLine();
 
-        if (userInput.isEmpty()) {
+        if (numbersInput.isEmpty()) {
             System.out.println("Please enter at least one number.");
             System.exit(0);
         } else {
 
-            String[] stringNumbersArray = userInput.split(" ");
+            String[] stringNumbersArray = numbersInput.split(" ");
             Double[] doubleNumbersArray = new Double[stringNumbersArray.length];
 
             double sum = 0;
@@ -52,7 +52,7 @@ public class BasicStat {
             System.out.println("Average: " + String.format("%,.2f", average));
             System.out.println("Median: " + String.format("%,.2f", median));
             System.out.println("Standard Deviation: " + String.format("%,.2f", standardDeviation));
-            numbersInput.close();
+            userInput.close();
         }
     }
 }
