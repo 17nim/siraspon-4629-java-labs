@@ -18,7 +18,7 @@ public class SicBoV2 {
     static Scanner userInput = new Scanner(System.in);
 
     static int rewardCalc(int matchedDice) {
-        int betReward = 10 * matchedDice * (9 % 6);
+        int betReward = 10 * matchedDice * ((9 % 5) + 1);
         return betReward;
     }
 
