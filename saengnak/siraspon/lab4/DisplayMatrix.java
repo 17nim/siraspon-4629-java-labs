@@ -124,3 +124,15 @@ public class DisplayMatrix {
     }
 }
 
+/*
+ * This program 'DisplayMatrix' lets the user determine the size 
+ * and elements of the matrix, and display it in various ways.
+ * 
+ * The matrix, which entered by the user, is stored by using
+ * two-dimensional integer array.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: January 8, 2023
+ */
