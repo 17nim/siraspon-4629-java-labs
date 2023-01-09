@@ -10,14 +10,16 @@ class Polygon {
     static int numPolygons;
     static double sumPolygonsArea;
 
-}
-
     double getArea() {
         switch (type) {
             case RECTANGLE:
-                System.out.println(width);
+                return width * height;
+
+            case TRIANGLE:
+                return width * height;
         }
     }
+}
 
 public class TestPolygons {
 
