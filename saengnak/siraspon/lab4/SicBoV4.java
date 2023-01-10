@@ -8,6 +8,7 @@ public class SicBoV4 {
     final static int MAX_INPUT = 100;
     static String[] gamePlay = new String[MAX_INPUT];
     static String[] gameResult = new String[MAX_INPUT];
+    static int currentInput = 0;
 
     static int dice1 = 1 + (int) (Math.random() * ((6 - 1) + 1));
     static int dice2 = 1 + (int) (Math.random() * ((6 - 1) + 1));
@@ -53,16 +54,25 @@ public class SicBoV4 {
                 } else {
                     System.out.println(" (Low)");
                 }
+                gamePlay[currentInput] = highOrLow;
             }
 
             if ((highOrLow.equals("h")) && diceSum >= 11) {
-                System.out.println("You won 20 baht!");
+                gameResult[currentInput] = "You won 20 baht!";
+                System.out.println(gameResult[currentInput]);
+                currentInput += 1;
             } else if ((highOrLow.equals("l")) && diceSum < 11) {
-                System.out.println("You won 20 baht!");
+                gameResult[currentInput] = "You won 20 baht!";
+                System.out.println(gameResult[currentInput]);
+                currentInput += 1;
             } else if ((highOrLow.equals("h")) && diceSum < 11) {
-                System.out.println("You lost 10 baht!");
+                gameResult[currentInput] = "You lost 10 baht!";
+                System.out.println(gameResult[currentInput]);
+                currentInput += 1;
             } else if ((highOrLow.equals("l")) && diceSum >= 11) {
-                System.out.println("You lost 10 baht!");
+                gameResult[currentInput] = "You lost 10 baht!";
+                System.out.println(gameResult[currentInput]);
+                currentInput += 1;
             } else {
                 System.out.println(invalidInput + " ('h' for high, 'l' for low only!)");
                 playGame();
@@ -77,6 +87,7 @@ public class SicBoV4 {
 
             if (Arrays.asList(diceRange).contains(pickNumber)) {
                 System.out.println(eachDice);
+                gamePlay[currentInput] = pickNumber;
 
                 if (pickNumber.equals(Integer.toString(dice1))) {
                     matchedDice += 1;
@@ -89,9 +100,14 @@ public class SicBoV4 {
                 }
 
                 if (matchedDice == 0) {
-                    System.out.println("You lost 10 baht!");
+                    gameResult[currentInput] = "You lost 10 baht!";
+                    System.out.println(gameResult[currentInput]);
+                    currentInput += 1;
+                    
                 } else {
-                    System.out.println("You won " + rewardCalc(matchedDice) + " baht!");
+                    gameResult[currentInput] = "You won " + rewardCalc(matchedDice) + " baht!";
+                    System.out.println(gameResult[currentInput]);
+                    currentInput += 1;
                 }
             } else {
                 System.out.println(invalidInput + " (Enter a number between 1 to 6 only!)");
@@ -108,7 +124,13 @@ public class SicBoV4 {
             System.out.println("Type 'A' to play again. Type other letter to exit.");
             String playAgain = userInput.next().toLowerCase();
             if (playAgain.equals("a") == false) {
-                System.out.println("Thanks for playing!");
+                System.out.println("### Game Play Summary ###");
+                for (int gameCount = 0; gameCount < currentInput; gameCount++) {
+                    System.out.println("Game " + gameCount + ":");
+                    System.out.println("You have bet on '" + gamePlay[gameCount] + "'.");
+                    System.out.println(gameResult[gameCount]);
+                }
+                System.out.println("Thanks for playing. Goodbye!");
                 userInput.close();
                 System.exit(0);
             }
@@ -117,7 +139,7 @@ public class SicBoV4 {
 }
 
 /*
- * This program 'SicBoV3' is a dice game with a variety of possible bets
+ * This program 'SicBoV4' is a dice game with a variety of possible bets
  * that based on the points of 3 dice. Each bets has its own payout odds.
  * This program provides 2 ways of playing:
  * 1. choosing high number or low number of dice points.
@@ -128,12 +150,12 @@ public class SicBoV4 {
  * 2. picking a number between 1 to 6: Players can bet on specific number they
  * desire, with the payout depending on how many dice match the number.
  * 
- * 'SicBoV3' is adapted from the previous program 'SicBoV2', with
- * an additional feature; if the player enter invalid input, the program 
- * will ask the player to enter again until it find the correct input.
+ * 'SicBoV4' is adapted from the previous program 'SicBoV3', with
+ * an additional feature; display the game play summary, which contains the 
+ * value of the player's bet, and result(s) of each game at the end of the program.
  * 
  * Made by: Siraspon Saengnak
  * ID: 653040462-9
  * Sec: 2
- * Date: January 6, 2023
+ * Date: January 10, 2023
  */
