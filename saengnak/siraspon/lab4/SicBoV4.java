@@ -60,19 +60,19 @@ public class SicBoV4 {
             if ((highOrLow.equals("h")) && diceSum >= 11) {
                 gameResult[currentInput] = "You won 20 baht!";
                 System.out.println(gameResult[currentInput]);
-                currentInput += 1;
+                currentInput++;
             } else if ((highOrLow.equals("l")) && diceSum < 11) {
                 gameResult[currentInput] = "You won 20 baht!";
                 System.out.println(gameResult[currentInput]);
-                currentInput += 1;
+                currentInput++;
             } else if ((highOrLow.equals("h")) && diceSum < 11) {
                 gameResult[currentInput] = "You lost 10 baht!";
                 System.out.println(gameResult[currentInput]);
-                currentInput += 1;
+                currentInput++;
             } else if ((highOrLow.equals("l")) && diceSum >= 11) {
                 gameResult[currentInput] = "You lost 10 baht!";
                 System.out.println(gameResult[currentInput]);
-                currentInput += 1;
+                currentInput++;
             } else {
                 System.out.println(invalidInput + " ('h' for high, 'l' for low only!)");
                 playGame();
@@ -90,24 +90,24 @@ public class SicBoV4 {
                 gamePlay[currentInput] = pickNumber;
 
                 if (pickNumber.equals(Integer.toString(dice1))) {
-                    matchedDice += 1;
+                    matchedDice++;
                 }
                 if (pickNumber.equals(Integer.toString(dice2))) {
-                    matchedDice += 1;
+                    matchedDice++;
                 }
                 if (pickNumber.equals(Integer.toString(dice3))) {
-                    matchedDice += 1;
+                    matchedDice++;
                 }
 
                 if (matchedDice == 0) {
                     gameResult[currentInput] = "You lost 10 baht!";
                     System.out.println(gameResult[currentInput]);
-                    currentInput += 1;
+                    currentInput++;
                     
                 } else {
                     gameResult[currentInput] = "You won " + rewardCalc(matchedDice) + " baht!";
                     System.out.println(gameResult[currentInput]);
-                    currentInput += 1;
+                    currentInput++;
                 }
             } else {
                 System.out.println(invalidInput + " (Enter a number between 1 to 6 only!)");
