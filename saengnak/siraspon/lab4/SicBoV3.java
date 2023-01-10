@@ -37,7 +37,7 @@ public class SicBoV3 {
     /**
      * Receives the betting choice of the player.
      */
-    static int getChoice() {
+    static void getChoice() {
         System.out.println("Choose how do you want to bet");
         System.out.println("Type '1': Choosing between high or low number.");
         System.out.println("Type '2': Picking a number between 1 to 6.");
@@ -48,8 +48,6 @@ public class SicBoV3 {
             System.out.println(invalidInput + " (Enter 1 or 2 only!)");
             getChoice();
         }
-
-        return choice;
     }
 
     /**
