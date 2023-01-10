@@ -3,6 +3,12 @@ package saengnak.siraspon.lab4;
 import java.util.Scanner;
 import java.util.Arrays;
 
+/**
+ * This program lets you play Sic Bo, the dice game that we love. (Version 4)
+ * 
+ * @author Siraspon Saengnak
+ * @version 4.0
+ */
 public class SicBoV4 {
     static int choice;
     final static int MAX_INPUT = 100;
@@ -21,11 +27,20 @@ public class SicBoV4 {
 
     static Scanner userInput = new Scanner(System.in);
 
+    /**
+     * Returns the value of calculated reward. 
+     * 
+     * @param matchedDice is the number of dice, that the point that shows on the dice, and the point that player picked, are matched.
+     * @return calculated reward.
+     */
     static int rewardCalc(int matchedDice) {
         int betReward = 10 * matchedDice * ((9 % 5) + 1);
         return betReward;
     }
 
+    /**
+     * Receives the betting choice of the player.
+     */
     static int getChoice() {
         System.out.println("Choose how do you want to bet");
         System.out.println("Type '1': Choosing between high or low number.");
@@ -41,6 +56,9 @@ public class SicBoV4 {
         return choice;
     }
 
+    /**
+     * Runs the game, according to the choice that the player picked.
+     */
     static void playGame() {
         if (choice == 1) {
             System.out.print("Type 'h' for high, 'l' for low: ");
@@ -116,6 +134,9 @@ public class SicBoV4 {
         }
     }
 
+    /**
+     * The main program.
+     */
     public static void main(String[] args) {
         while (true) {
             System.out.println("Welcome to ศิรัสพล แสงนาค (653040462-9)'s game!");

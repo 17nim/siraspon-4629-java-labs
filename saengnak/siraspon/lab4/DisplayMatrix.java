@@ -2,13 +2,22 @@ package saengnak.siraspon.lab4;
 
 import java.util.Scanner;
 
+/**
+ * This program displays matrix in various ways.
+ * 
+ * @author Siraspon Saengnak
+ * @version 4.0
+ */
 public class DisplayMatrix {
     static int[][] matrix;
     static int rowDim, colDim;
 
     static Scanner userInput = new Scanner(System.in);
 
-    static void inputMatrix() {
+    /**
+     * Receives the size and the elements of the matrix.
+     */
+    public static void inputMatrix() {
         System.out.print("Enter the size of the matrix: ");
         String[] rowsAndColumns = userInput.nextLine().split(" ");
 
@@ -29,7 +38,10 @@ public class DisplayMatrix {
         }
     }
 
-    static void showMatrix() {
+    /**
+     * Displays the original matrix.
+     */
+    public static void showMatrix() {
         System.out.println("Show the original matrix:");
         for (int i = 0; i < rowDim; i++) {
             for (int j = 0; j < colDim; j++) {
@@ -39,7 +51,10 @@ public class DisplayMatrix {
         }
     }
 
-    static void showMatrixByRow() {
+    /**
+     * Displays the matrix, by row.
+     */
+    public static void showMatrixByRow() {
         System.out.print("Show the matrix, by row: ");
         for (int i = 0; i < rowDim; i++) {
             for (int j = 0; j < colDim; j++) {
@@ -49,7 +64,10 @@ public class DisplayMatrix {
         System.out.println();
     }
 
-    static void showMatrixByColumn() {
+    /**
+     * Displays the matrix, by column.
+     */
+    public static void showMatrixByColumn() {
         System.out.print("Show the matrix, by column: ");
         for (int i = 0; i < colDim; i++) {
             for (int j = 0; j < rowDim; j++) {
@@ -59,7 +77,10 @@ public class DisplayMatrix {
         System.out.println();
     }
 
-    static void showMatrixByRowBackward() {
+    /**
+     * Displays the matrix, by row, backward.
+     */
+    public static void showMatrixByRowBackward() {
         System.out.print("Show the matrix, by row, backward: ");
         for (int i = rowDim - 1; i >= 0; i--) {
             for (int j = colDim - 1; j >= 0; j--) {
@@ -69,7 +90,10 @@ public class DisplayMatrix {
         System.out.println();
     }
 
-    static void showMatrixByColumnBackward() {
+    /**
+     * Displays the matrix, by column, backward.
+     */
+    public static void showMatrixByColumnBackward() {
         System.out.print("Show the matrix, by column, backward: ");
         for (int i = colDim - 1; i >= 0; i--) {
             for (int j = rowDim - 1; j >= 0; j--) {
@@ -79,7 +103,10 @@ public class DisplayMatrix {
         System.out.println();
     }
 
-    static void showMatrixByDiagonalTopLeftBottomRight() {
+    /**
+     * Displays the matrix, diagonally from top-left to bottom-right.
+     */
+    public static void showMatrixByDiagonalTopLeftBottomRight() {
         System.out.print("Show the diagonal elements of the matrix from top-left to bottom-right: ");
         for (int i = 0; i < rowDim && i < colDim; i++) {
             System.out.print(matrix[i][i] + " ");
@@ -87,15 +114,21 @@ public class DisplayMatrix {
         System.out.println();
     }
 
-    static void showMatrixByDiagonalTopRightBottomLeft() {
+    /**
+     * Displays the matrix, diagonally from top-right to bottom-left.
+     */
+    public static void showMatrixByDiagonalTopRightBottomLeft() {
         System.out.print("Show the diagonal elements of the matrix from top-right to bottom-left: ");
         for (int i = 0; i < rowDim; i++) {
             System.out.print(matrix[i][colDim - 1 - i] + " ");
         }
         System.out.println();
     }
-
-    static void showMatrixByRowZigzag() {
+    
+    /**
+     * Displays the matrix, by row, zigzag.
+     */
+    public static void showMatrixByRowZigzag() {
         System.out.print("Show the matrix, by row, zigzag: ");
         for (int i = 0; i < rowDim; i++) {
             if (i % 2 == 0) {
@@ -110,6 +143,9 @@ public class DisplayMatrix {
         }
     }
 
+    /**
+     * The main program.
+     */
     public static void main(String[] args) {
         inputMatrix();
         showMatrix();
