@@ -29,7 +29,7 @@ public class SicBoV3 {
      * @param matchedDice is the number of dice, that the point that shows on the dice, and the point that player picked, are matched.
      * @return calculated reward.
      */
-    static int rewardCalc(int matchedDice) {
+    public static int rewardCalc(int matchedDice) {
         int betReward = 10 * matchedDice * ((9 % 5) + 1);
         return betReward;
     }
@@ -37,7 +37,7 @@ public class SicBoV3 {
     /**
      * Receives the betting choice of the player.
      */
-    static void getChoice() {
+    public static void getChoice() {
         boolean validInput = false;
         while (validInput == false) {
             System.out.println("Choose how do you want to bet");
@@ -62,7 +62,7 @@ public class SicBoV3 {
     /**
      * Runs the game, according to the choice that the player picked.
      */
-    static void playGame() {
+    public static void playGame() {
         if (choice == 1) {
             System.out.print("Type 'h' for high, 'l' for low: ");
             String highOrLow = userInput.next().toLowerCase();
