@@ -42,15 +42,24 @@ public class SicBoV4 {
      * Receives the betting choice of the player.
      */
     static void getChoice() {
-        System.out.println("Choose how do you want to bet");
-        System.out.println("Type '1': Choosing between high or low number.");
-        System.out.println("Type '2': Picking a number between 1 to 6.");
-        System.out.print("Enter your choice (1 or 2): ");
-        choice = userInput.nextInt();
+        boolean validInput = false;
+        while (validInput == false) {
+            System.out.println("Choose how do you want to bet");
+            System.out.println("Type '1': Choosing between high or low number.");
+            System.out.println("Type '2': Picking a number between 1 to 6.");
+            System.out.print("Enter your choice (1 or 2): ");
 
-        if ((choice == 1 || choice == 2) == false) {
-            System.out.println(invalidInput + " (Enter 1 or 2 only!)");
-            getChoice();
+            if (userInput.hasNextInt() == true) {
+                choice = userInput.nextInt();
+                if (choice == 1 || choice == 2) {
+                    validInput = true;
+                } else {
+                    System.out.println(invalidInput + " (Enter 1 or 2 only!)");
+                }
+            } else {
+                System.out.println(invalidInput + " (Enter 1 or 2 only!)");
+                userInput.next();
+            }
         }
     }
 
