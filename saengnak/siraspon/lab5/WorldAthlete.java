@@ -71,9 +71,10 @@ class Athlete {
     void compareAge(Athlete athleteB) {
         LocalDate dateBefore = this.getBirthdate();
         LocalDate dateAfter = athleteB.getBirthdate();
-        int yearsGap = (int)ChronoUnit.YEARS.between(dateBefore, dateAfter);
+        int yearsGap = (int) ChronoUnit.YEARS.between(dateBefore, dateAfter);
         if (yearsGap < 0) {
-            System.out.println(athleteB.getName() + " is " + (yearsGap * -1) + " years older than " + this.getName() + ".");
+            System.out.println(
+                    athleteB.getName() + " is " + (yearsGap * -1) + " years older than " + this.getName() + ".");
         } else if (yearsGap > 0) {
             System.out.println(athleteB.getName() + " is " + yearsGap + " years younger than " + this.getName() + ".");
         } else {
@@ -83,7 +84,7 @@ class Athlete {
 
     public String toString() {
         return "Athlete [" + name + ", " + weight + " kg, " + height + " m, " + gender + ", " + nationality
-        + ", " + getBirthdate() + "]";
+                + ", " + getBirthdate() + "]";
     }
 }
 
