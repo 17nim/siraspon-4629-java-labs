@@ -83,8 +83,7 @@ class Athlete {
     }
 
     public String toString() {
-        return "Athlete [" + name + ", " + weight + " kg, " + height + " m, " + gender + ", " + nationality
-                + ", " + getBirthdate() + "]";
+        return name + ", " + weight + " kg, " + height + " m, " + gender + ", " + nationality + ", " + getBirthdate();
     }
 }
 
@@ -111,3 +110,17 @@ public class WorldAthlete {
         sungjihyun.compareAge(kento);
     }
 }
+
+/*
+ * This program 'WorldAthlete' display athletes information that
+ * is stored in class 'Athlete', which contains attributes for each object
+ * of the class. The class also has setter and getter methods for each
+ * attributes, and compareAge() method for comparing ages of two athletes
+ * using attributes of their birthdate. This class has an enum called Gender,
+ * that contains two types of gender for the athletes, MALE and FEMALE.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: January 19, 2023
+ */
