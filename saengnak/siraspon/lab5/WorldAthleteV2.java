@@ -1,5 +1,7 @@
 package saengnak.siraspon.lab5;
 
+import saengnak.siraspon.lab5.Athlete.Gender;
+
 public class WorldAthleteV2 {
     static boolean isTaller(Athlete athleteA, Athlete athleteB) {
         return athleteA.getHeight() > athleteB.getHeight();
