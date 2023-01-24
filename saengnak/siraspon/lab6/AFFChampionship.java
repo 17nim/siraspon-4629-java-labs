@@ -31,7 +31,6 @@ public class AFFChampionship extends Competition {
         } else {
             System.out.println(sponsors.get(0) + " is a sponsor of " + name);
         }
-
     }
 
     void setDescription() {
