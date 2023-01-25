@@ -36,3 +36,17 @@ public class AFFChampionship extends Competition {
     void setDescription() {
     };
 }
+
+/*
+ * This class 'AFFChampionship' is a subclass that is extended from the class
+ * 'Competition'. This class includes two additional attributes, teamA and teamB
+ * 
+ * This program includes an additional method called setPlaces(), which displays
+ * the competition name and the location. It also overrides setSponsorship() and
+ * setDescription().
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: January 19, 2023
+ */

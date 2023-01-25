@@ -12,3 +12,13 @@ public interface BadmintonPlayable {
 
     int getWorldRanking();
 }
+
+/*
+ * This interface 'BadmintonPLayable' contains two attributes racketLength, and
+ * worldRanking, and their setter and getter methods.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: January 25, 2023
+ */

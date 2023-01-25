@@ -28,3 +28,15 @@ public class InterestingCompetitions {
         aff2020.setSponsorship(sponsors);
     }
 }
+
+/*
+ * This program 'InterestingCompetitions' display various information that is
+ * stored in the superclass 'Competition', and its subclass 'AFFChampionship'.
+ * 
+ * This program displays competitions names, locations, and sponsors.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: January 25, 2023
+ */

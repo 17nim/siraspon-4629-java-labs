@@ -22,3 +22,16 @@ public class WorldAthleteV3 {
         }
     }
 }
+
+/*
+ * This program 'WorldAthleteV3' display athletes information that
+ * is stored in the superclass 'AthleteV2', and its subclasses.
+ * 
+ * This program displays athletes names and their practice routines
+ * that stored using ArrayList.
+ *  
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: January 25, 2023
+ */

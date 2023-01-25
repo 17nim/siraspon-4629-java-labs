@@ -24,3 +24,16 @@ public class WorldAthleteV4 {
         }
     }
 }
+
+/*
+ * This program 'WorldAthleteV4' display various information that is
+ * stored in the class 'BadmintonPlayerV3', and its interfaces.
+ * 
+ * This program displays various attributes of a Badminton player
+ * that is stored in an ArrayList.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: January 25, 2023
+ */

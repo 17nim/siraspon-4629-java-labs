@@ -37,3 +37,15 @@ public class BadmintonPlayerV3 extends BadmintonPlayerV2 implements BadmintonPla
                 + getSpeed();
     }
 }
+
+/*
+ * This class 'BadmintonPlayerV3' is a subclass that is extended from the class
+ * 'BadmintonPlayerV2' and implements two interfaces: BadmintonPlayable and Sprinter.
+ * This class contains three attributes: racketLength, worldRanking, and speed.
+ * It also overrides setter and getter methods for those attributes.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: January 25, 2023
+ */

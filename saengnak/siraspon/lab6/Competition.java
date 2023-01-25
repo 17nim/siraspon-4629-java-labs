@@ -25,3 +25,14 @@ public abstract class Competition {
 
     abstract void setSponsorship(ArrayList<String> sponsors);
 }
+
+/*
+ * This class 'Competition' contains two attributes called name and region,
+ * the setter and getter methods of these attributes, and two abstract methods
+ * setDescription() and setSponsorship().
+ *
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: January 25, 2023
+ */
