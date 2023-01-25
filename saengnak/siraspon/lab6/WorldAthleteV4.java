@@ -1,8 +1,7 @@
 package saengnak.siraspon.lab6;
 
 import java.util.ArrayList;
-
-import saengnak.siraspon.lab5.Athlete.Gender;;
+import saengnak.siraspon.lab5.Athlete.Gender;
 
 public class WorldAthleteV4 {
     public static void main(String[] args) {

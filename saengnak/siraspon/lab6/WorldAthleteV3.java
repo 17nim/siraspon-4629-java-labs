@@ -18,7 +18,7 @@ public class WorldAthleteV3 {
 
         for (AthleteV2 athlete : athletes) {
             System.out.println(athlete);
-            axelsen.practice();
+            athlete.practice();
         }
     }
 }

@@ -8,6 +8,6 @@ class BoxerV2 extends AthleteV2 {
     @Override
     void practice() {
         super.practice();
-        System.out.println(" and swings arms");
+        System.out.println(", and swings arms.");
     }
 }

@@ -8,6 +8,6 @@ class BadmintonPlayerV2 extends AthleteV2 {
     @Override
     void practice() {
         super.practice();
-        System.out.println(" and plays half court singles");
+        System.out.println(", and plays half court singles.");
     }
 }

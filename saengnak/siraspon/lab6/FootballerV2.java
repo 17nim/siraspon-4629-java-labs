@@ -8,6 +8,6 @@ class FootballerV2 extends AthleteV2 {
     @Override
     void practice() {
         super.practice();
-        System.out.println(" and catches a football");
+        System.out.println(", and catches a football.");
     }
 }
