@@ -11,11 +11,11 @@ class MySimpleWindow extends JFrame {
     }
 
     public void addComponents() {
-        JPanel mainPanel = new JPanel();
-        JPanel buttonPanel = new JPanel();
-        JButton cancelButton = new JButton("Cancel");
-        JButton resetButton = new JButton("Reset");
-        JButton submitButton = new JButton("Submit");
+        mainPanel = new JPanel();
+        buttonPanel = new JPanel();
+        cancelButton = new JButton("Cancel");
+        resetButton = new JButton("Reset");
+        submitButton = new JButton("Submit");
 
         buttonPanel.add(cancelButton);
         buttonPanel.add(resetButton);
