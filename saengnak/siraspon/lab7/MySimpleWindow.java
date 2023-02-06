@@ -3,14 +3,14 @@ package saengnak.siraspon.lab7;
 import javax.swing.*;
 
 class MySimpleWindow extends JFrame {
-    protected JButton cancelButton, resetButton, submitButton;
-    protected JPanel mainPanel, buttonPanel;
-
     MySimpleWindow(String title) {
         super(title);
     }
 
-    public void addComponents() {
+    protected JPanel mainPanel, buttonPanel;
+    protected JButton cancelButton, resetButton, submitButton;
+
+    protected void addComponents() {
         mainPanel = new JPanel();
         buttonPanel = new JPanel();
         cancelButton = new JButton("Cancel");
@@ -32,7 +32,7 @@ class MySimpleWindow extends JFrame {
         this.setLocationRelativeTo(null);
     }
 
-    public static void createAndShowGUI() {
+    static void createAndShowGUI() {
         MySimpleWindow msw = new MySimpleWindow("My Simple Window");
         msw.addComponents();
         msw.setFrameFeatures();
