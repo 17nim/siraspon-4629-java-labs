@@ -1,6 +1,7 @@
 package saengnak.siraspon.lab7;
 
 import javax.swing.*;
+import java.awt.*;
 
 class MySimpleWindow extends JFrame {
     MySimpleWindow(String title) {
@@ -10,7 +11,7 @@ class MySimpleWindow extends JFrame {
     protected JPanel mainPanel, buttonPanel;
     protected JButton cancelButton, resetButton, submitButton;
 
-    protected void addComponents() {
+    void addComponents() {
         mainPanel = new JPanel();
         buttonPanel = new JPanel();
         cancelButton = new JButton("Cancel");
@@ -21,8 +22,7 @@ class MySimpleWindow extends JFrame {
         buttonPanel.add(resetButton);
         buttonPanel.add(submitButton);
 
-        mainPanel.add(buttonPanel);
-        this.add(mainPanel);
+        this.add(buttonPanel, BorderLayout.SOUTH);
     }
 
     protected void setFrameFeatures() {
