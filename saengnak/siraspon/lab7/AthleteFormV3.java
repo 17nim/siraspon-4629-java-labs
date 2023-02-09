@@ -76,3 +76,23 @@ class AthleteFormV3 extends AthleteFormV2 {
         });
     }
 }
+
+/*
+ * This program 'AthleteFormV3' is extended from class 'AthleteFormV2'. It has
+ * additional components from previous program: a menu bar with two menus
+ * labelled 'File' and 'Config'.
+ * 
+ * The menu 'File' has four menu items which are 'New', 'Open', 'Save', and
+ * 'Exit'.
+ * The menu 'Config' has two submenu which are 'Color', and 'Size'.
+ * The submenu 'Color' has three menu items: Red, Green, and Blue.
+ * The submenu 'Size' has three menu items: 16, 20, and 24.
+ * 
+ * This program has overridden the method addComponents() to add more
+ * components;
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: February 9, 2023
+ */

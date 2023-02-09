@@ -70,3 +70,18 @@ class AthleteFormV2 extends AthleteForm {
         });
     }
 }
+
+/*
+ * This program 'AthleteFormV2' is extended from class 'AthleteForm'. It has
+ * additional components from previous program: a combo box of nationalities 
+ * labelled 'Nationality', a list of sports labelled 'Sport', and a text area 
+ * with scroll pane labelled 'Bio'.
+ * 
+ * This program has overridden the method addComponents() to add more
+ * components;
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: February 9, 2023
+ */

@@ -41,7 +41,7 @@ class AthleteForm extends MySimpleWindow {
         mainConstrains.gridx = 1;
         mainConstrains.gridy = 1;
         mainPanel.add(weightTextField, mainConstrains);
-        
+
         birthdateLabel = new JLabel("Height :");
         birthdateTextField = new JTextField(15);
         mainConstrains.gridx = 0;
@@ -50,7 +50,7 @@ class AthleteForm extends MySimpleWindow {
         mainConstrains.gridx = 1;
         mainConstrains.gridy = 2;
         mainPanel.add(birthdateTextField, mainConstrains);
-        
+
         heightLabel = new JLabel("Date of birth (dd-mm-yyyy) :");
         heightTextField = new JTextField(15);
         mainConstrains.gridx = 0;
@@ -91,3 +91,19 @@ class AthleteForm extends MySimpleWindow {
         });
     }
 }
+
+/*
+ * This program 'AthleteForm' is extended from class 'MySimpleWindow'. It shows
+ * a window with the title labelled 'AthleteForm', text fields with labels of
+ * 'Name', 'Weight', 'Height', 'Date of birth', a radio button group of 'Male'
+ * and 'Female' labelled 'Gender', and three non-functional button: 'Cancel',
+ * 'Reset', and 'Submit'.
+ * 
+ * This program has overridden the method addComponents() to add more
+ * components;
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: February 9, 2023
+ */

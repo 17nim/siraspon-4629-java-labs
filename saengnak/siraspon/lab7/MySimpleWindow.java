@@ -46,3 +46,17 @@ class MySimpleWindow extends JFrame {
         });
     }
 }
+
+/*
+ * This program 'MySimpleWindow' is extended from class 'JFrame'. It shows a
+ * window with the title labelled 'MySimpleWindow', and three non-functional
+ * button: 'Cancel', 'Reset', and 'Submit'.
+ * 
+ * This program has three methods: addComponents(), setFrameFeatures(),
+ * and createAndShowGUI().
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: February 9, 2023
+ */
