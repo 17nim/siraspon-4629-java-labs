@@ -13,31 +13,52 @@ class AthleteForm extends MySimpleWindow {
     protected JPanel genderButtonPanel;
     protected ButtonGroup genderButtonGroup;
     protected JRadioButton maleButton, femaleButton;
+    protected GridBagConstraints mainConstrains;
 
     void addComponents() {
         super.addComponents();
 
-        mainPanel.setLayout(new GridLayout(0, 2));
+        this.add(mainPanel, BorderLayout.NORTH);
+
+        mainPanel.setLayout(new GridBagLayout());
+        mainConstrains = new GridBagConstraints();
+        mainConstrains.fill = GridBagConstraints.HORIZONTAL;
 
         nameLabel = new JLabel("Name :");
         nameTextField = new JTextField(15);
-        mainPanel.add(nameLabel);
-        mainPanel.add(nameTextField);
+        mainConstrains.gridx = 0;
+        mainConstrains.gridy = 0;
+        mainPanel.add(nameLabel, mainConstrains);
+        mainConstrains.gridx = 1;
+        mainConstrains.gridy = 0;
+        mainPanel.add(nameTextField, mainConstrains);
 
         weightLabel = new JLabel("Weight :");
         weightTextField = new JTextField(15);
-        mainPanel.add(weightLabel);
-        mainPanel.add(weightTextField);
+        mainConstrains.gridx = 0;
+        mainConstrains.gridy = 1;
+        mainPanel.add(weightLabel, mainConstrains);
+        mainConstrains.gridx = 1;
+        mainConstrains.gridy = 1;
+        mainPanel.add(weightTextField, mainConstrains);
         
         birthdateLabel = new JLabel("Height :");
         birthdateTextField = new JTextField(15);
-        mainPanel.add(birthdateLabel);
-        mainPanel.add(birthdateTextField);
+        mainConstrains.gridx = 0;
+        mainConstrains.gridy = 2;
+        mainPanel.add(birthdateLabel, mainConstrains);
+        mainConstrains.gridx = 1;
+        mainConstrains.gridy = 2;
+        mainPanel.add(birthdateTextField, mainConstrains);
         
         heightLabel = new JLabel("Date of birth (dd-mm-yyyy) :");
         heightTextField = new JTextField(15);
-        mainPanel.add(heightLabel);
-        mainPanel.add(heightTextField);
+        mainConstrains.gridx = 0;
+        mainConstrains.gridy = 3;
+        mainPanel.add(heightLabel, mainConstrains);
+        mainConstrains.gridx = 1;
+        mainConstrains.gridy = 3;
+        mainPanel.add(heightTextField, mainConstrains);
 
         genderLabel = new JLabel("Gender :");
         genderButtonGroup = new ButtonGroup();
@@ -48,10 +69,12 @@ class AthleteForm extends MySimpleWindow {
         genderButtonPanel = new JPanel();
         genderButtonPanel.add(maleButton);
         genderButtonPanel.add(femaleButton);
-        mainPanel.add(genderLabel);
-        mainPanel.add(genderButtonPanel);
-
-        this.add(mainPanel, BorderLayout.NORTH);
+        mainConstrains.gridx = 0;
+        mainConstrains.gridy = 4;
+        mainPanel.add(genderLabel, mainConstrains);
+        mainConstrains.gridx = 1;
+        mainConstrains.gridy = 4;
+        mainPanel.add(genderButtonPanel, mainConstrains);
     }
 
     static void createAndShowGUI() {
