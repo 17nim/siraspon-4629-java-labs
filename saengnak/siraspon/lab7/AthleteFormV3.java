@@ -14,7 +14,6 @@ public class AthleteFormV3 extends AthleteFormV2 {
     protected ImageIcon newIcon, openIcon, saveIcon, exitIcon;
 
     protected void addMenus() {
-
         fileMenu = new JMenu("File");
 
         newIcon = new ImageIcon("saengnak/siraspon/lab7/icons/plus-circle.png");

@@ -1,21 +1,34 @@
 package saengnak.siraspon.lab7;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class AthleteFormV2 extends AthleteForm {
     protected AthleteFormV2(String title) {
         super(title);
     }
 
+    protected JPanel middlePanel, middleTopPanel;
     protected JLabel nationalityLabel, sportsLabel, bioLabel;
     protected JComboBox<String> nationalityComboBox;
     protected JList<String> sportsList;
     protected String[] sportsArray;
     protected JTextArea bioTextArea;
     protected JScrollPane bioScrollPane;
+    protected GridBagConstraints middleConstrains;
 
     protected void addComponents() {
         super.addComponents();
+
+        middlePanel = new JPanel();
+        middlePanel.setLayout(new BorderLayout());
+
+        middleTopPanel = new JPanel();
+        middleTopPanel.setLayout(new GridBagLayout());
+        middleConstrains = new GridBagConstraints();
+        middleConstrains.fill = GridBagConstraints.HORIZONTAL;
+        middleConstrains.weightx = 1;
+        middleConstrains.weighty = 1;
 
         nationalityLabel = new JLabel("Nationality :");
         nationalityComboBox = new JComboBox<>();
@@ -26,34 +39,35 @@ public class AthleteFormV2 extends AthleteForm {
         nationalityComboBox.addItem("Thai");
         nationalityComboBox.addItem("Vietnamese");
         nationalityComboBox.setSelectedIndex(4);
-        mainConstrains.gridx = 0;
-        mainConstrains.gridy = 5;
-        mainPanel.add(nationalityLabel, mainConstrains);
-        mainConstrains.gridx = 1;
-        mainConstrains.gridy = 5;
-        mainPanel.add(nationalityComboBox, mainConstrains);
+        middleConstrains.gridx = 0;
+        middleConstrains.gridy = 0;
+        middleTopPanel.add(nationalityLabel, middleConstrains);
+        middleConstrains.gridx = 1;
+        middleTopPanel.add(nationalityComboBox, middleConstrains);
 
         sportsLabel = new JLabel("Sport :");
         String[] sportsArray = { "Badminton", "Boxing", "Football", "Running" };
         sportsList = new JList<>(sportsArray);
-        mainConstrains.gridx = 0;
-        mainConstrains.gridy = 6;
-        mainPanel.add(sportsLabel, mainConstrains);
-        mainConstrains.gridx = 1;
-        mainConstrains.gridy = 6;
-        mainPanel.add(sportsList, mainConstrains);
+        sportsList.setSelectedIndex(2);
+        middleConstrains.gridx = 0;
+        middleConstrains.gridy++;
+        middleTopPanel.add(sportsLabel, middleConstrains);
+        middleConstrains.gridx = 1;
+        middleTopPanel.add(sportsList, middleConstrains);
 
         bioLabel = new JLabel("Bio :");
-        bioTextArea = new JTextArea(5,0);
+        middleConstrains.gridx = 0;
+        middleConstrains.gridy++;
+        middleTopPanel.add(bioLabel, middleConstrains);
+
+        bioTextArea = new JTextArea(5, 0);
         bioTextArea.setLineWrap(true);
         bioTextArea.setWrapStyleWord(true);
         bioScrollPane = new JScrollPane(bioTextArea);
-        mainConstrains.gridx = 0;
-        mainConstrains.gridy = 7;
-        mainPanel.add(bioLabel, mainConstrains);
-        mainConstrains.gridy = 8;
-        mainConstrains.gridwidth = 2;
-        mainPanel.add(bioScrollPane, mainConstrains);
+
+        middlePanel.add(middleTopPanel, BorderLayout.NORTH);
+        middlePanel.add(bioScrollPane, BorderLayout.CENTER);
+        mainPanel.add(middlePanel, BorderLayout.CENTER);
     }
 
     protected static void createAndShowGUI() {
@@ -73,8 +87,8 @@ public class AthleteFormV2 extends AthleteForm {
 
 /*
  * This program 'AthleteFormV2' is extended from class 'AthleteForm'. It has
- * additional components from previous program: a combo box of nationalities 
- * labelled 'Nationality', a list of sports labelled 'Sport', and a text area 
+ * additional components from previous program: a combo box of nationalities
+ * labelled 'Nationality', a list of sports labelled 'Sport', and a text area
  * with scroll pane labelled 'Bio'.
  * 
  * This program has overridden the method addComponents() to add more

@@ -13,6 +13,7 @@ public class MySimpleWindow extends JFrame {
 
     protected void addComponents() {
         mainPanel = new JPanel();
+        mainPanel.setLayout(new BorderLayout());
         buttonPanel = new JPanel();
         cancelButton = new JButton("Cancel");
         resetButton = new JButton("Reset");
@@ -22,7 +23,9 @@ public class MySimpleWindow extends JFrame {
         buttonPanel.add(resetButton);
         buttonPanel.add(submitButton);
 
-        this.add(buttonPanel, BorderLayout.SOUTH);
+        mainPanel.add(buttonPanel, BorderLayout.SOUTH);
+        this.setLayout(new BorderLayout());
+        this.add(mainPanel, BorderLayout.CENTER);
     }
 
     protected void setFrameFeatures() {
