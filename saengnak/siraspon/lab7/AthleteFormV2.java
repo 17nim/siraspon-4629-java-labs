@@ -2,8 +2,8 @@ package saengnak.siraspon.lab7;
 
 import javax.swing.*;
 
-class AthleteFormV2 extends AthleteForm {
-    AthleteFormV2(String title) {
+public class AthleteFormV2 extends AthleteForm {
+    protected AthleteFormV2(String title) {
         super(title);
     }
 
@@ -14,7 +14,7 @@ class AthleteFormV2 extends AthleteForm {
     protected JTextArea bioTextArea;
     protected JScrollPane bioScrollPane;
 
-    void addComponents() {
+    protected void addComponents() {
         super.addComponents();
 
         nationalityLabel = new JLabel("Nationality :");
@@ -56,7 +56,7 @@ class AthleteFormV2 extends AthleteForm {
         mainPanel.add(bioScrollPane, mainConstrains);
     }
 
-    static void createAndShowGUI() {
+    protected static void createAndShowGUI() {
         AthleteFormV2 athleteFormV2 = new AthleteFormV2("Athlete Form V2");
         athleteFormV2.addComponents();
         athleteFormV2.setFrameFeatures();

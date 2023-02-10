@@ -3,8 +3,8 @@ package saengnak.siraspon.lab7;
 import javax.swing.*;
 import java.awt.*;
 
-class AthleteForm extends MySimpleWindow {
-    AthleteForm(String title) {
+public class AthleteForm extends MySimpleWindow {
+    protected AthleteForm(String title) {
         super(title);
     }
 
@@ -15,7 +15,7 @@ class AthleteForm extends MySimpleWindow {
     protected JRadioButton maleButton, femaleButton;
     protected GridBagConstraints mainConstrains;
 
-    void addComponents() {
+    protected void addComponents() {
         super.addComponents();
 
         this.add(mainPanel, BorderLayout.NORTH);
@@ -77,7 +77,7 @@ class AthleteForm extends MySimpleWindow {
         mainPanel.add(genderButtonPanel, mainConstrains);
     }
 
-    static void createAndShowGUI() {
+    protected static void createAndShowGUI() {
         AthleteForm athleteForm = new AthleteForm("Athlete Form");
         athleteForm.addComponents();
         athleteForm.setFrameFeatures();

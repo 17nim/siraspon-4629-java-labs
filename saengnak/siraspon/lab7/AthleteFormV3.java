@@ -2,8 +2,8 @@ package saengnak.siraspon.lab7;
 
 import javax.swing.*;
 
-class AthleteFormV3 extends AthleteFormV2 {
-    AthleteFormV3(String title) {
+public class AthleteFormV3 extends AthleteFormV2 {
+    protected AthleteFormV3(String title) {
         super(title);
     }
 
@@ -13,7 +13,7 @@ class AthleteFormV3 extends AthleteFormV2 {
             colorMenuItem_blue, sizeMenuItem_16, sizeMenuItem_20, sizeMenuItem_24;
     protected ImageIcon newIcon, openIcon, saveIcon, exitIcon;
 
-    void addMenus() {
+    protected void addMenus() {
 
         fileMenu = new JMenu("File");
 
@@ -61,7 +61,7 @@ class AthleteFormV3 extends AthleteFormV2 {
         this.setJMenuBar(menuBar);
     }
 
-    static void createAndShowGUI() {
+    protected static void createAndShowGUI() {
         AthleteFormV3 athleteFormV3 = new AthleteFormV3("Athlete Form V3");
         athleteFormV3.addMenus();
         athleteFormV3.addComponents();
