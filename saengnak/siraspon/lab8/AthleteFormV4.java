@@ -11,7 +11,8 @@ public class AthleteFormV4 extends AthleteFormV3 {
 
     protected JPanel hobbiesPanel, middleBottomPanel;
     protected JLabel hobbiesLabel, experienceYearLabel;
-    protected JCheckBox hobbiesCheckBox_reading, hobbiesCheckBox_gardening, hobbiesCheckBox_watchingMovies, hobbiesCheckBox_shopping, hobbiesCheckBox_others;
+    protected JCheckBox hobbiesCheckBox_reading, hobbiesCheckBox_gardening, hobbiesCheckBox_watchingMovies,
+            hobbiesCheckBox_shopping, hobbiesCheckBox_others;
     protected JSlider experienceYearSlider;
 
     protected void addComponents() {
@@ -50,7 +51,7 @@ public class AthleteFormV4 extends AthleteFormV3 {
         middleBottomPanel.add(experienceYearLabel, middleConstrains);
         middleConstrains.gridy++;
         middleBottomPanel.add(experienceYearSlider, middleConstrains);
-        
+
         middlePanel.add(middleBottomPanel, BorderLayout.SOUTH);
     }
 

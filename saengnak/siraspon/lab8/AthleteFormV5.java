@@ -10,7 +10,7 @@ public class AthleteFormV5 extends AthleteFormV4 {
 
     protected Color textFieldColor, sportsListColor, textAreaColor, menuColor;
     protected Font labelFont, buttonFont, menuFont;
-    
+
     protected void addComponents() {
         super.addComponents();
 
