@@ -1,3 +1,18 @@
+/*
+ * This program 'AthleteFormV4' is extended from class 'AthleteFormV3'. It has
+ * additional components from previous program: A panel labelled 'Hobbies' which 
+ * contains several checkboxes of hobbies, and a slider labelled 'Year of 
+ * experience in this sport'.
+ * 
+ * This program has overridden the method addComponents() to add more
+ * components.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: February 15, 2023
+ */
+
 package saengnak.siraspon.lab8;
 
 import javax.swing.*;

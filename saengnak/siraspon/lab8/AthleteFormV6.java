@@ -1,3 +1,17 @@
+/*
+ * This program 'AthleteFormV6' is extended from class 'AthleteFormV5'. It has
+ * an additional component from previous program: a drawing of Olympic symbol 
+ * at the top of the window using the graphics class. 
+ * 
+ * This program has overridden the method addComponents(), and implementing 
+ * the class OlympicSymbol for adding more components.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: February 15, 2023
+ */
+
 package saengnak.siraspon.lab8;
 
 import javax.swing.*;

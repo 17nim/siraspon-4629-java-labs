@@ -1,3 +1,18 @@
+/*
+ * This program 'AthleteFormV5' is extended from class 'AthleteFormV4'. It has
+ * additional features from previous program: Set color for every text fields,
+ * text area, list of sports, and menu items, set font for every labels and buttons,
+ * and add tooltips for buttons and menus. 
+ * 
+ * This program has overridden the method addComponents() and addMenus()
+ * for adding more features.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: February 15, 2023
+ */
+
 package saengnak.siraspon.lab8;
 
 import javax.swing.*;

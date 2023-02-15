@@ -1,3 +1,17 @@
+/*
+ * This program 'AthleteFormV7' is extended from class 'AthleteFormV6'. It has
+ * an additional component from previous program: an Olympic-related image  
+ * at the bottom of the window using the graphics class. 
+ * 
+ * This program has overridden the method addComponents(), and implementing 
+ * the class ReadImage for adding more components.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: February 15, 2023
+ */
+
 package saengnak.siraspon.lab8;
 
 import javax.imageio.*;
