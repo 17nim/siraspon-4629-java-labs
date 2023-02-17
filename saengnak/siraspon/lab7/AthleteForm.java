@@ -41,21 +41,21 @@ public class AthleteForm extends MySimpleWindow {
         topConstrains.gridx = 1;
         topPanel.add(weightTextField, topConstrains);
 
-        birthdateLabel = new JLabel("Height :");
-        birthdateTextField = new JTextField(15);
-        topConstrains.gridx = 0;
-        topConstrains.gridy++;
-        topPanel.add(birthdateLabel, topConstrains);
-        topConstrains.gridx = 1;
-        topPanel.add(birthdateTextField, topConstrains);
-
-        heightLabel = new JLabel("Date of birth (dd-mm-yyyy) :");
+        heightLabel = new JLabel("Height :");
         heightTextField = new JTextField(15);
         topConstrains.gridx = 0;
         topConstrains.gridy++;
         topPanel.add(heightLabel, topConstrains);
         topConstrains.gridx = 1;
         topPanel.add(heightTextField, topConstrains);
+
+        birthdateLabel = new JLabel("Date of birth (dd-mm-yyyy) :");
+        birthdateTextField = new JTextField(15);
+        topConstrains.gridx = 0;
+        topConstrains.gridy++;
+        topPanel.add(birthdateLabel, topConstrains);
+        topConstrains.gridx = 1;
+        topPanel.add(birthdateTextField, topConstrains);
 
         genderLabel = new JLabel("Gender :");
         genderButtonGroup = new ButtonGroup();
