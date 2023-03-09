@@ -14,15 +14,18 @@ public class AthleteFormV8 extends AthleteFormV6 implements ActionListener {
 
     protected String name, weight, height, birthdate, gender, hobby, nationality, sport, experience;
     protected ArrayList<JCheckBox> hobbiesList;
+    protected ArrayList<String> sportsArrayList;
     protected Color newTextFieldColor, resetTextFieldColor;
     protected Object sourceObject;
 
     protected void addComponents() {
         super.addComponents();
+
         maleButton.setActionCommand("Male");
         femaleButton.setActionCommand("Female");
         hobbiesList = new ArrayList<>(Arrays.asList(hobbiesCheckBox_reading, hobbiesCheckBox_gardening,
                 hobbiesCheckBox_watchingMovies, hobbiesCheckBox_shopping, hobbiesCheckBox_others));
+        sportsList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
     }
 
     protected void addListeners() {
@@ -78,9 +81,14 @@ public class AthleteFormV8 extends AthleteFormV6 implements ActionListener {
             nationality = "";
         }
 
-        sport = sportsList.getSelectedValue();
-        if (sport == null) {
-            sport = "";
+        sport = "";
+        sportsArrayList = new ArrayList<>(sportsList.getSelectedValuesList());
+        for (String i : sportsArrayList) {
+            sport += i + ", ";
+        }
+
+        if (sport.length() >= 2) {
+            sport = sport.substring(0, sport.length() - 2);
         }
 
         experience = Integer.toString(experienceYearSlider.getValue());
@@ -94,6 +102,17 @@ public class AthleteFormV8 extends AthleteFormV6 implements ActionListener {
         heightTextField.setText("");
         birthdateTextField.setText("");
         genderButtonGroup.clearSelection();
+
+        for (JCheckBox i : hobbiesList) {
+            if (i == hobbiesCheckBox_watchingMovies) {
+                i.setSelected(true);
+            } else {
+                i.setSelected(false);
+            }
+        }
+
+        nationalityComboBox.setSelectedIndex(4);
+        sportsList.setSelectedIndex(2);
         experienceYearSlider.setValue(0);
         bioTextArea.setText("");
     }
