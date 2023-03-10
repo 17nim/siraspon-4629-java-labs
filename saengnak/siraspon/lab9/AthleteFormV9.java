@@ -1,3 +1,17 @@
+/*
+ * This program 'AthleteFormV9' is extended from 'AthleteFormV8' class and implements the 'ItemListener' interface.
+ * The program has overridden the method addComponents() for adding an ArrayList of JMenuItems.
+ * The program has overridden the method addListeners() for adding listeners to various components.
+ * The program has additional method called 'addShortcuts()' that sets keyboard shortcuts for the menu items 
+ * using 'setAccelerator()' method and sets mnemonic keys for the menu items using 'setMnemonic()' method.
+ * The program detects the change in the components and shows a pop-up window using JOptionPane.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: March 10, 2023
+ */
+
 package saengnak.siraspon.lab9;
 
 import javax.swing.*;

@@ -1,3 +1,16 @@
+/*
+ * This program 'AthleteFormV10' is extended from 'AthleteFormV9' class and 
+ * implements the 'ListSelectionListener' and 'ChangeListener' interfaces.
+ * 
+ * The program detects change in the components sportsList using 'ListSelectionListener'
+ * and experienceYearSlider using 'ChangeListener' and shows a pop-up window using JOptionPane.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: March 10, 2023
+ */
+
 package saengnak.siraspon.lab9;
 
 import javax.swing.*;

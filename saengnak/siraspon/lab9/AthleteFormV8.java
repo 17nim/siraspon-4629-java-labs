@@ -1,3 +1,15 @@
+/*
+ * This program 'AthleteFormV8' is extended from 'AthleteFormV6' class and implements the ActionListener interface.
+ * The program includes various Swing components that are used in methods that handle 'Cancel', 'Reset', and 'Submit' buttons.
+ * The program has overridden the method addComponents() for adding more components.
+ * The program uses ArrayList to store lists of hobbies and sports.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: March 10, 2023
+ */
+
 package saengnak.siraspon.lab9;
 
 import javax.swing.*;
@@ -12,7 +24,8 @@ public class AthleteFormV8 extends AthleteFormV6 implements ActionListener {
         super(title);
     }
 
-    protected String name, weight, height, birthdate, gender, hobby, nationality, sport, experience;
+    protected String nameString, weightString, heightString, birthdateString, genderString, hobbyString,
+            nationalityString, sportString, experienceString;
     protected ArrayList<JCheckBox> hobbiesList;
     protected ArrayList<String> sportsArrayList;
     protected Color newTextFieldColor, resetTextFieldColor;
@@ -54,44 +67,44 @@ public class AthleteFormV8 extends AthleteFormV6 implements ActionListener {
     }
 
     protected void getInfo() {
-        name = nameTextField.getText();
-        weight = weightTextField.getText();
-        height = heightTextField.getText();
-        birthdate = birthdateTextField.getText();
+        nameString = nameTextField.getText();
+        weightString = weightTextField.getText();
+        heightString = heightTextField.getText();
+        birthdateString = birthdateTextField.getText();
 
         if (genderButtonGroup.getSelection() == null) {
-            gender = "";
+            genderString = "";
         } else {
-            gender = genderButtonGroup.getSelection().getActionCommand();
+            genderString = genderButtonGroup.getSelection().getActionCommand();
         }
 
-        hobby = "";
+        hobbyString = "";
         for (JCheckBox i : hobbiesList) {
             if (i.isSelected()) {
-                hobby += i.getText() + ", ";
+                hobbyString += i.getText() + ", ";
             }
         }
 
-        if (hobby.length() >= 2) {
-            hobby = hobby.substring(0, hobby.length() - 2);
+        if (hobbyString.length() >= 2) {
+            hobbyString = hobbyString.substring(0, hobbyString.length() - 2);
         }
 
-        nationality = (String) nationalityComboBox.getSelectedItem();
-        if (nationality == null) {
-            nationality = "";
+        nationalityString = (String) nationalityComboBox.getSelectedItem();
+        if (nationalityString == null) {
+            nationalityString = "";
         }
 
-        sport = "";
+        sportString = "";
         sportsArrayList = new ArrayList<>(sportsList.getSelectedValuesList());
         for (String i : sportsArrayList) {
-            sport += i + ", ";
+            sportString += i + ", ";
         }
 
-        if (sport.length() >= 2) {
-            sport = sport.substring(0, sport.length() - 2);
+        if (sportString.length() >= 2) {
+            sportString = sportString.substring(0, sportString.length() - 2);
         }
 
-        experience = Integer.toString(experienceYearSlider.getValue());
+        experienceString = Integer.toString(experienceYearSlider.getValue());
     }
 
     protected void handleCancelButton() {
@@ -131,15 +144,15 @@ public class AthleteFormV8 extends AthleteFormV6 implements ActionListener {
 
     protected void handleSubmitButton() {
         getInfo();
-        bioTextArea.setText("Name : " + name +
-                "\nWeight : " + weight +
-                "\nHeight : " + height +
-                "\nDate of birth : " + birthdate +
-                "\nGender : " + gender +
-                "\nHobby : " + hobby +
-                "\nNationality : " + nationality +
-                "\nSport : " + sport +
-                "\nYear(s) of experience : " + experience + "\n");
+        bioTextArea.setText("Name : " + nameString +
+                "\nWeight : " + weightString +
+                "\nHeight : " + heightString +
+                "\nDate of birth : " + birthdateString +
+                "\nGender : " + genderString +
+                "\nHobby : " + hobbyString +
+                "\nNationality : " + nationalityString +
+                "\nSport : " + sportString +
+                "\nYear(s) of experience : " + experienceString + "\n");
         bioTextArea.select(0, 0);
     }
 
@@ -152,7 +165,6 @@ public class AthleteFormV8 extends AthleteFormV6 implements ActionListener {
         if (sourceObject == resetButton) {
             handleResetButton();
         }
-
         if (sourceObject == submitButton) {
             handleSubmitButton();
         }
