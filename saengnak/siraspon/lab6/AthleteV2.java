@@ -1,7 +1,7 @@
 package saengnak.siraspon.lab6;
 
 public class AthleteV2 extends saengnak.siraspon.lab5.Athlete {
-    AthleteV2(String name, double weight, double height, Gender gender, String nationality, String birthdate) {
+    public AthleteV2(String name, double weight, double height, Gender gender, String nationality, String birthdate) {
         super(name, weight, height, gender, nationality, birthdate);
     }
 

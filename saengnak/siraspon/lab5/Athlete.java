@@ -13,7 +13,11 @@ public class Athlete {
     protected double weight, height;
     protected Gender gender;
 
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    public DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+    public Athlete() {
+
+    }
 
     public Athlete(String name, double weight, double height, Gender gender, String nationality, String birthdate) {
         this.name = name;
@@ -24,55 +28,55 @@ public class Athlete {
         this.birthdate = birthdate;
     }
 
-    void setName(String newName) {
+    public void setName(String newName) {
         name = newName;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    void setWeight(double newWeight) {
+    public void setWeight(double newWeight) {
         weight = newWeight;
     }
 
-    double getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    void setHeight(double newHeight) {
+    public void setHeight(double newHeight) {
         height = newHeight;
     }
 
-    double getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    void setGender(Gender newGender) {
+    public void setGender(Gender newGender) {
         gender = newGender;
     }
 
-    Gender getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    void setNationality(String newNationality) {
+    public void setNationality(String newNationality) {
         nationality = newNationality;
     }
 
-    String getNationality() {
+    public String getNationality() {
         return nationality;
     }
 
-    void setBirthdate(String newBirthdate) {
+    public void setBirthdate(String newBirthdate) {
         birthdate = newBirthdate;
     }
 
-    LocalDate getBirthdate() {
+    public LocalDate getBirthdate() {
         return LocalDate.parse(birthdate, formatter);
     }
 
-    void compareAge(Athlete athleteB) {
+    public void compareAge(Athlete athleteB) {
         LocalDate dateBefore = this.getBirthdate();
         LocalDate dateAfter = athleteB.getBirthdate();
         int yearsGap = (int) ChronoUnit.YEARS.between(dateBefore, dateAfter);
