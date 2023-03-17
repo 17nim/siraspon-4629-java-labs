@@ -137,21 +137,15 @@ public class AthleteFormV11 extends AthleteFormV10 {
 
     protected void searchAthlete() {
         searchAthleteInput = JOptionPane.showInputDialog("Please enter the athlete name : ");
-        athleteCounter = athleteInfoList.size();
 
-        if (athleteCounter < 1) {
-            JOptionPane.showMessageDialog(null, "Athlete " + searchAthleteInput + " is NOT found.");
-            return;
+        for (AthleteV2 i : athleteInfoList) {
+            athleteNameList.add(i.getName().toLowerCase());
+        }
+
+        if (athleteNameList.contains(searchAthleteInput.toLowerCase())) {
+            JOptionPane.showMessageDialog(null, "Athlete " + searchAthleteInput + " is found.");
         } else {
-            for (AthleteV2 i : athleteInfoList) {
-                athleteNameList.add(i.getName().toLowerCase());
-            }
-
-            if (athleteNameList.contains(searchAthleteInput.toLowerCase())) {
-                JOptionPane.showMessageDialog(null, "Athlete " + searchAthleteInput + " is found.");
-            } else {
-                JOptionPane.showMessageDialog(null, "Athlete " + searchAthleteInput + " is NOT found.");
-            }
+            JOptionPane.showMessageDialog(null, "Athlete " + searchAthleteInput + " is NOT found.");
         }
     }
 
