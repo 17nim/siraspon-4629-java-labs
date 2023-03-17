@@ -1,3 +1,17 @@
+/*
+ * This program 'AthleteFormV13' is extended from 'AthleteFormV12' class.
+ * 
+ * The program has several additional features from the previous version:
+ * checks if user input invalid value or not for weight and height,
+ * which have to be number, check if weight is in range of (0, 200],
+ * and check if height is in range (0,300].
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: March 17, 2023
+ */
+
 package saengnak.siraspon.lab10;
 
 import javax.swing.*;

@@ -1,3 +1,16 @@
+/*
+ * This program 'AthleteFormV12' is extended from 'AthleteFormV11' class.
+ * 
+ * The program has an additional feature from the previous version:
+ * sorting athlete info in the list by name, height, and height and weight
+ * using comparator classes for each sorting types.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: March 17, 2023
+ */
+
 package saengnak.siraspon.lab10;
 
 import javax.swing.*;

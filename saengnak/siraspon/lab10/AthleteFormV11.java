@@ -1,3 +1,14 @@
+/*
+ * This program 'AthleteFormV11' is extended from 'AthleteFormV10' class.
+ * 
+ * The program allows the user to add, display, clear, and search athlete information.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: March 17, 2023
+ */
+
 package saengnak.siraspon.lab10;
 
 import javax.swing.*;
