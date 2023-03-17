@@ -21,11 +21,13 @@ public class AthleteFormV11 extends AthleteFormV10 {
     protected JMenuItem addMenuItem, displayMenuItem, clearMenuItem, searchMenuItem, sortByNameMenuItem, sortByHeightMenuItem, sortByHeightAndWeightMenuItem;
     protected ArrayList<JMenuItem> dataMenuItemsList, sortMenuItemsList;
     protected ArrayList<AthleteV2> athleteInfoList;
+    protected ArrayList<String> athleteNameList;
 
     protected void addComponents() {
         super.addComponents();
 
         athleteInfoList = new ArrayList<>();
+        athleteNameList = new ArrayList<>();
     }
 
     protected void addListeners() {
@@ -130,6 +132,7 @@ public class AthleteFormV11 extends AthleteFormV10 {
 
     protected void clearAthlete() {
         athleteInfoList.clear();
+        athleteNameList.clear();
     }
 
     protected void searchAthlete() {
@@ -138,13 +141,16 @@ public class AthleteFormV11 extends AthleteFormV10 {
 
         if (athleteCounter < 1) {
             JOptionPane.showMessageDialog(null, "Athlete " + searchAthleteInput + " is NOT found.");
+            return;
         } else {
             for (AthleteV2 i : athleteInfoList) {
-                if (searchAthleteInput.equalsIgnoreCase(i.getName())) {
-                    JOptionPane.showMessageDialog(null, "Athlete " + i + " is found.");
-                } else {
-                    JOptionPane.showMessageDialog(null, "Athlete " + searchAthleteInput + " is NOT found.");
-                }
+                athleteNameList.add(i.getName().toLowerCase());
+            }
+
+            if (athleteNameList.contains(searchAthleteInput.toLowerCase())) {
+                JOptionPane.showMessageDialog(null, "Athlete " + searchAthleteInput + " is found.");
+            } else {
+                JOptionPane.showMessageDialog(null, "Athlete " + searchAthleteInput + " is NOT found.");
             }
         }
     }
