@@ -1,10 +1,11 @@
 package saengnak.siraspon.lab5;
 
+import java.io.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
-public class Athlete {
+public class Athlete implements Serializable {
     public enum Gender {
         MALE, FEMALE
     }
@@ -13,10 +14,10 @@ public class Athlete {
     protected double weight, height;
     protected Gender gender;
 
-    public DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    public DateTimeFormatter formatter;
 
     public Athlete() {
-
+        return;
     }
 
     public Athlete(String name, double weight, double height, Gender gender, String nationality, String birthdate) {
@@ -26,6 +27,7 @@ public class Athlete {
         this.gender = gender;
         this.nationality = nationality;
         this.birthdate = birthdate;
+        formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     }
 
     public void setName(String newName) {
