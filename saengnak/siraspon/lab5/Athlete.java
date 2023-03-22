@@ -14,7 +14,7 @@ public class Athlete implements Serializable {
     protected double weight, height;
     protected Gender gender;
 
-    public DateTimeFormatter formatter;
+    //public DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public Athlete() {
         return;
@@ -27,7 +27,6 @@ public class Athlete implements Serializable {
         this.gender = gender;
         this.nationality = nationality;
         this.birthdate = birthdate;
-        formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     }
 
     public void setName(String newName) {
@@ -75,7 +74,7 @@ public class Athlete implements Serializable {
     }
 
     public LocalDate getBirthdate() {
-        return LocalDate.parse(birthdate, formatter);
+        return LocalDate.parse(birthdate, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     }
 
     public void compareAge(Athlete athleteB) {
