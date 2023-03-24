@@ -1,3 +1,16 @@
+/*
+ * This program 'AthleteFormV14' is extended from 'AthleteFormV13' class.
+ * 
+ * The program has several additional features from the previous version:
+ * user can save and open file that collect the athlete's info, which are
+ * name and hobbies, in the form of text file.
+ * 
+ * Made by: Siraspon Saengnak
+ * ID: 653040462-9
+ * Sec: 2
+ * Date: March 24, 2023
+ */
+
 package saengnak.siraspon.lab11;
 
 import javax.swing.*;
